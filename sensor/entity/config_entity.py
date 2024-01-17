@@ -32,7 +32,11 @@ class DataIngestionConfig:
         except Exception  as e:
             raise SensorException(e,sys)
 
-
+    def to_dict(self,)->dict:
+        try:
+            return self.__dict__
+        except Exception  as e:
+            raise SensorException(e,sys)  
 
 class DataValidationConfig:...
 
